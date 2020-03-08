@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,12 @@ public class Tab1Fragment extends Fragment {
         law_data();
         RecyclerView rvContacts = (RecyclerView) view.findViewById(R.id.rvContacts);
         LawsAdapter r_adapter = new LawsAdapter(list_laws);
+
+      // 分割线
+        RecyclerView.ItemDecoration itemDecoration = new
+        DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
+        rvContacts.addItemDecoration(itemDecoration);
+
         rvContacts.setAdapter(r_adapter);
         rvContacts.setLayoutManager( new LinearLayoutManager(getActivity()));
         return view;

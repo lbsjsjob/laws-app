@@ -24,9 +24,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
 
+
         adapter = new TabAdapter(getSupportFragmentManager());
         adapter.addFragment(new Tab1Fragment(), "林业法律法规");
-        adapter.addFragment(new Tab1Fragment(), "林地法律法规");
+        adapter.addFragment(new Tab2Fragment(), "林地法律法规");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
