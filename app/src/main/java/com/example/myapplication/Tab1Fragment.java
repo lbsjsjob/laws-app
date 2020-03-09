@@ -39,6 +39,7 @@ public class Tab1Fragment extends Fragment {
           list_laws.add(new Laws("新森林法实施条例"));
           list_laws.add(new Laws("森林法"));
           list_laws.add(new Laws("森林法实施条例"));
+          list_laws.add(new Laws("河南省林地保护管理条例"));
       }
 
 

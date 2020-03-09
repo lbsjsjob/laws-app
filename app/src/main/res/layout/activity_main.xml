@@ -21,7 +21,7 @@
             android:minHeight="?actionBarSize"
             android:padding="@dimen/appbar_padding"
             android:text="林业相关"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
@@ -29,7 +29,10 @@
             android:layout_height="wrap_content"
             android:background="#fff1f0"
 
-            >
+            app:tabIndicatorColor="#e32519"
+            app:tabSelectedTextColor="#e32519"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Display3"
+            app:tabTextColor="#686f75">
 
         </com.google.android.material.tabs.TabLayout>
 
