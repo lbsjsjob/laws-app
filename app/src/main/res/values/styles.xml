@@ -6,6 +6,11 @@
         <item name="colorPrimary">#e32519</item>
         <item name="colorPrimaryDark">#e32519</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/font_qg</item>
+    </style>
+
+    <style name="customfontstyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/font_qg</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
