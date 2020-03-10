@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -17,10 +18,19 @@ import java.util.List;
 public class Tab1Fragment extends Fragment {
 
     List<Laws> list_laws;
+
+    //点击事件
+    private RecyclerView mRecyclerView;
+    private TextView contact_name;
+
+
+
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_one, container, false);
         law_data();
         RecyclerView rvContacts = (RecyclerView) view.findViewById(R.id.rvContacts);
+
         LawsAdapter r_adapter = new LawsAdapter(list_laws);
 
       // 分割线
@@ -28,8 +38,24 @@ public class Tab1Fragment extends Fragment {
         DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
         rvContacts.addItemDecoration(itemDecoration);
 
+
+
         rvContacts.setAdapter(r_adapter);
         rvContacts.setLayoutManager( new LinearLayoutManager(getActivity()));
+
+        //点击事件
+        mRecyclerView =  (RecyclerView) view.findViewById(R.id.rvContacts);
+        contact_name = (TextView) view.findViewById(R.id.contact_name);
+        ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(
+                new ItemClickSupport.OnItemClickListener() {
+                    @Override
+                    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                        // do it
+                        Toast.makeText(getContext(), list_laws.get(position).getName(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
+
         return view;
     }
 
@@ -41,6 +67,7 @@ public class Tab1Fragment extends Fragment {
           list_laws.add(new Laws("森林法实施条例"));
           list_laws.add(new Laws("河南省林地保护管理条例"));
       }
+
 
 
     }

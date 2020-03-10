@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -13,6 +15,13 @@ import java.util.List;
 public class LawsAdapter extends  RecyclerView.Adapter<LawsAdapter.ViewHolder> {
 
     private List<Laws> mContacts;
+
+
+
+
+
+
+
     public LawsAdapter(List<Laws> contacts) {
         mContacts = contacts;
     }
@@ -58,6 +67,7 @@ public class LawsAdapter extends  RecyclerView.Adapter<LawsAdapter.ViewHolder> {
         textView.setText(contact.getName());
 
 
+
     }
 
     // Returns the total count of items in the list
@@ -67,3 +77,5 @@ public class LawsAdapter extends  RecyclerView.Adapter<LawsAdapter.ViewHolder> {
     }
 
 }
+
+
