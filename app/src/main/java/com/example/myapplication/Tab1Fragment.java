@@ -19,9 +19,6 @@ public class Tab1Fragment extends Fragment {
 
     List<Laws> list_laws;
 
-    //点击事件
-    private RecyclerView mRecyclerView;
-    private TextView contact_name;
 
 
 
@@ -43,18 +40,7 @@ public class Tab1Fragment extends Fragment {
         rvContacts.setAdapter(r_adapter);
         rvContacts.setLayoutManager( new LinearLayoutManager(getActivity()));
 
-        //点击事件
-        mRecyclerView =  (RecyclerView) view.findViewById(R.id.rvContacts);
-        contact_name = (TextView) view.findViewById(R.id.contact_name);
-        ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(
-                new ItemClickSupport.OnItemClickListener() {
-                    @Override
-                    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                        // do it
-                        Toast.makeText(getContext(), list_laws.get(position).getName(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
+
 
         return view;
     }
