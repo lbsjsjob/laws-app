@@ -47,9 +47,9 @@ public class LawsAdapter extends  RecyclerView.Adapter<LawsAdapter.ViewHolder> {
             if (position != RecyclerView.NO_POSITION) { // Check if an item was deleted, but the user clicked it before the UI removed it
                 // We can access the data within the views
                 Toast.makeText(view.getContext(), nameTextView.getText(), Toast.LENGTH_SHORT).show();
-                 String lawName = "森林法";
+                 String lawName = nameTextView.getText().toString();
                 Intent intent = new Intent(view.getContext(),law_content_activity.class);
-                intent.putExtra("森林法",lawName);
+                intent.putExtra(lawName,lawName);
                 view.getContext().startActivity(intent);
             }
         }
