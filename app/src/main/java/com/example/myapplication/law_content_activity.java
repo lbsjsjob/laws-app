@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -38,27 +39,30 @@ public class law_content_activity extends AppCompatActivity {
             }
         });
 
-        Intent intent = getIntent();
-        String lawName = intent.getStringExtra("森林法");
-switch (lawName){
+
+switch (transferData.TDate){
     case "森林法":
-        // 解析html显示于textview
-        String htmlAsString = getString(R.string.森林法);      // used by WebView
-        Spanned htmlAsSpanned = Html.fromHtml(htmlAsString); // used by TextView
-        // set the html content on a TextView
-        TextView textView = (TextView) findViewById(R.id.law_content_textview);
-        textView.setText(htmlAsSpanned);
+        setmTextView(transferData.TDate);
         break;
-    case "森林法":
+    case "森林法实施条例":
+        setmTextView(transferData.TDate);
+        break;
+    case "河南省林地保护管理条例":
+        setmTextView(transferData.TDate);
+        break;
+    case "新森林法":
+        setmTextView(transferData.TDate);
+        break;
     default:
         break;
 }
     }
 void setmTextView(String lawName){
     // 解析html显示于textview
-    String htmlAsString = getString(R.string.lawName);      // used by WebView
-    Spanned htmlAsSpanned = Html.fromHtml(htmlAsString); // used by TextView
-    // set the html content on a TextView
+    Resources res = this.getResources();
+    int lawId = res.getIdentifier(lawName, "string", this.getPackageName());
+    String htmlAsString = getString(lawId);
+    Spanned htmlAsSpanned = Html.fromHtml(htmlAsString);
     TextView textView = (TextView) findViewById(R.id.law_content_textview);
     textView.setText(htmlAsSpanned);
 }

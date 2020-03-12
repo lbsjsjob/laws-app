@@ -2,7 +2,7 @@
 <resources>
 <string name="森林法">
         <![CDATA[
-        <p>
+       <p>
 	<br />
 </p>
 <div style="color:#24292E;background-color:#FFFFFF;font-family:Consolas, &quot;font-size:14px;">
@@ -11,7 +11,7 @@
 	</div>
 <br />
 	<div>
-		&emsp;&emsp;<span style="color:#E53333;">（１９８４年９月２０日第六届全国人民代表大会常务委员会第七次会议通过&emsp;根据１９９８年４月２９日第九届全国人民代表大会常务委员会第二次会议《关于修改〈中华人民共和国森林法〉的决定》修正）&nbsp;&emsp;</span>&emsp;
+		<span style="color:#000000;">&emsp;&emsp;</span><span style="color:#E53333;"><span style="color:#000000;">（１９８４年９月２０日第六届全国人民代表大会常务委员会第七次会议通过&emsp;根据１９９８年４月２９日第九届全国人民代表大会常务委员会第二次会议《关于修改〈中华人民共和国森林法〉的决定》修正）</span>&nbsp;&emsp;</span>&emsp;
 	</div>
 <br />
 	<div>
