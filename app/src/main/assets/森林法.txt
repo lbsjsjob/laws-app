@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-<string name="森林法">
-        <![CDATA[
-       <p>
+  <p>
 	<br />
 </p>
 <div style="color:#24292E;background-color:#FFFFFF;font-family:Consolas, &quot;font-size:14px;">
@@ -388,6 +384,3 @@
 <p>
 	<br />
 </p>
-        ]]>
-    </string>
-</resources>

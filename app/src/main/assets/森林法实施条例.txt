@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="森林法实施条例">
-        <![CDATA[
-       <p>
+  <p>
 	<br />
 </p>
 <div style="color:#24292E;background-color:#FFFFFF;font-family:Consolas, &quot;font-size:14px;">
@@ -194,6 +190,3 @@
 <span style="font-family:SimSun;font-size:14px;"></span><br />
 	</div>
 </div>
-        ]]>
-    </string>
-</resources>

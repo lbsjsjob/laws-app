@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-<string name="新森林法">
-        <![CDATA[
+
        <h3 style="text-align:center;">
 	<span>新森林法</span>
 </h3>
@@ -209,6 +206,3 @@
 <span style="font-family:SimSun;">（三）林地，是指县级以上人民政府规划确定的用于发展林业的土地。包括郁闭度0.2以上的乔木林地以及竹林地、灌木林地、疏林地、采伐迹地、火烧迹地、未成林造林地、苗圃地等。</span><br />
 <span style="font-family:SimSun;">第八十四条&emsp;本法自2020年7月1日起施行。</span><br />
 <span style="font-family:SimSun;"></span>
-</p>]]>
-    </string>
-</resources>

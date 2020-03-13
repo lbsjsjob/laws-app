@@ -16,6 +16,10 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class law_content_activity extends AppCompatActivity {
 
 
@@ -57,11 +61,32 @@ switch (transferData.TDate){
         break;
 }
     }
+
+    private String getTermsString(String lawName) {
+
+        StringBuilder termsString = new StringBuilder();
+        BufferedReader reader;
+        try {
+            reader = new BufferedReader(
+                    new InputStreamReader(getAssets().open(lawName + ".txt")));
+
+            String str;
+            while ((str = reader.readLine()) != null) {
+                termsString.append(str);
+            }
+
+            reader.close();
+            return termsString.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 void setmTextView(String lawName){
     // 解析html显示于textview
-    Resources res = this.getResources();
-    int lawId = res.getIdentifier(lawName, "string", this.getPackageName());
-    String htmlAsString = getString(lawId);
+
+    String htmlAsString = getTermsString(lawName);
     Spanned htmlAsSpanned = Html.fromHtml(htmlAsString);
     TextView textView = (TextView) findViewById(R.id.law_content_textview);
     textView.setText(htmlAsSpanned);
